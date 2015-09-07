@@ -1,6 +1,8 @@
 body    { font-family: Helvetica Neue, Arial, sans-serif;
           font-size: 1.5em; }
 
+#schedule
+        { font-size: 1em; }
 
 select  {   -webkit-appearance: none;
             -moz-appearance: none;
