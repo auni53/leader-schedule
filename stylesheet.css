@@ -1,1 +1,4 @@
-body    { font-family: Helvetica Neue, Arial, sans-serif; }
+body    { font-family: Helvetica Neue, Arial, sans-serif;
+          font-size: 2em; }
+
+.option { font-size: 2em; }
