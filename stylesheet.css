@@ -3,6 +3,9 @@ body    { font-family: Helvetica Neue, Arial, sans-serif;
 
 h1      { font-size: 1.5em; margin-bottom: 10px; }
 
+.box    { border-radius: 11px; border: 1px solid black; 
+          padding: 4px; margin-bottom: 6px; }
+
 #schedule
         { font-size: 1em; }
 
