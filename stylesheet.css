@@ -1,6 +1,8 @@
 body    { font-family: Helvetica Neue, Arial, sans-serif;
           font-size: 1.5em; background-color: #F5F5F5; }
 
+h1      { font-size: 1.5em; margin-bottom: 10px; }
+
 #schedule
         { font-size: 1em; }
 
