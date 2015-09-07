@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        Select leader group:
+        <span class="bold">Select leader group:</span><br>
         <select id="group">
             <option value="burgundy">burgundy</option>
             <option value="red">red</option>
@@ -48,7 +48,7 @@
                 }
                 shift -= 14;    //7:00 is shift 0; 14 half-hours passed
                 
-                document.getElementById("output").innerHTML = "now: "+sched[option][shift] + "<br/>next: "+sched[option][shift+1];
+                document.getElementById("output").innerHTML = "You should be at <span class='bold'>"+sched[option][shift] + "</span>.<br/>At the next half-hour, go to <span class='bold'>" +sched[option][shift+1] + "</span>.";
             }
 
         </script>
