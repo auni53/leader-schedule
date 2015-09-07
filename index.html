@@ -4,6 +4,8 @@
 
     <head>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="jquery.js"></script>
+
         <title>VicO15 Leader Schedule</title>
     </head>
 
@@ -29,13 +31,15 @@
         </select>
         <button onclick="select()">Submit</button>
 
+        
+        <p id="output"></p>
+
         <script>
             function select() {
                 
                 var option = document.getElementById("group").value;
-                console.log(option);
-
-
+                document.getElementById("output").innerHTML = option;
+                 
             }
 
         </script>
