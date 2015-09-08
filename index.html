@@ -35,7 +35,7 @@
         </select>
         <button onclick="select()">Submit</button><br><br>
 
-        <p id="direction">You should be at <span id='now' class='bold'></span> doe. At <span id="next_time"></span>, be at <span id='next' class='bold'></span> plz.</p>
+        <p id="direction"></p>
         
         <p id="schedule"></p>
 
@@ -50,10 +50,10 @@
                 document.getElementById("direction").style.display = "initial"; 
                 var option = document.getElementById("group").value;
 
-                document.getElementById("direction").innerHTML = "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span>.</p>";
+                document.getElementById("schedule").innerHTML = "";
+                document.getElementById("direction").innerHTML = "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span> plz.</p>";
                 if (option == 'auni') {
                     document.getElementById("direction").innerHTML = "<h1>Good choice yo.</h1><img src='feature.png' height=290px>";
-                    document.getElementById("schedule").innerHTML = "";
                     return;
                 }
     
