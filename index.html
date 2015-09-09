@@ -33,15 +33,17 @@
             <option value="black">black</option>
             <option value="auni">auni</option>
         </select>
+        <button type="button" onclick="drake()">Drake Mode</button>
+        <button type="button" onclick="swift()">Swift Mode</button>
+        <button type="button" onclick="atkins()">Ben Atkins Mode</button>
+        <button type="button" onclick="brit()">British Mode</button>
+
         <!--button onclick="select()">Submit</button><br><br-->
 
         <br><br>
         <p id="direction"></p>
         <p id="schedule"></p>
     
-        <button type="button" onclick="drake()">Drake Mode</button>
-        <button type="button" onclick="swift()">Swift Mode</button>
-
         <script>
 
         // Global variable with raw schedule information
@@ -54,13 +56,14 @@
             }
 
             
-            MODE = 0;
 
             // Sets the welcome message
             $( document ).ready(function() {
                 document.getElementById("direction").style.display = "none"; 
                 document.getElementById("day").innerHTML = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'][new Date().getDay()];
             });    
+
+            MODE = "penis";
 
             function drake() {
                 MODE = 0;
@@ -71,6 +74,16 @@
                 MODE = 1;
                 select(); 
             };
+        
+            function atkins() {
+                MODE = 2;
+                select();
+            };
+
+            function brit() {
+                MODE = 3;
+                select();
+            };
 
             // Core function that updates the schedule based on selection
             $( "#group" ).change(select);
@@ -80,9 +93,28 @@
                 var option = document.getElementById("group").value;
                 if (option == "") return;
                 document.getElementById("schedule").innerHTML = "";
+       
+                var text; 
+                switch(MODE) {
+                    case 0:
+                        text = "I was runnin' through da <span id='now' class='bold'></span> with Vic O. If you're reading this, it's not too late to be at <span id='next_time'></span> <span id='next' class='bold'></span>.";
+                        break;
+                    case 1:
+                        text = "You should totally be at <span id='now' class='bold'></span>. <span id='next' class='bold'></span> at <span id='next_time'></span> never goes out of style.";
+                        break;
+                    case 2:
+                        text = "<font size=30>Listen to me</font> -- you must be at <span id='now' class='bold'></span>. Chill with <span id='next' class='bold'></span> at <span id='next_time'></span>.";
+                        break;
+                    case 3:
+                        text = "'ello gov'nah, Her Majesty requests you at <span id='now' class='bold'></span>. Be a good ol' chap and make your way to <span id='next' class='bold'></span> at <span id='next_time'></span>.";
+                        break;
         
-                var text = (MODE == 0 ? "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span> plz.</p>" :
-                                   "You should totally be at <span id='now' class='bold'></span>, and at <span id='next_time'></span>, <span id='next' class='bold'></span> never goes out of style.</p>");
+                    default:
+                        text = "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span> plz.";
+                        break;
+                } 
+     
+                                   
                 document.getElementById("direction").innerHTML = text;
                 if (option == 'auni') {
                     document.getElementById("direction").innerHTML = "<h1>Good choice yo.</h1><img src='feature.png' height=290px>";
