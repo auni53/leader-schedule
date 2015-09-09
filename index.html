@@ -38,6 +38,9 @@
         <br><br>
         <p id="direction"></p>
         <p id="schedule"></p>
+    
+        <button type="button" onclick="drake()">Drake Mode</button>
+        <button type="button" onclick="swift()">Swift Mode</button>
 
         <script>
 
@@ -50,6 +53,8 @@
                 'FRI': {"purple": ["Leader Appreciation", "Clubs' Fair setup", "Clubs' Fair setup", "Commuter Storage", "Commuter Storage", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Commuter Storage", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "white": ["Leader Appreciation", "Leader Appreciation", "Carnival setup", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "aqua": ["Leader Appreciation", "Clubs' Fair setup", "Clubs' Fair setup", "Clubs' Fair", "Clubs' Fair", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Concert", "Concert", "Concert", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "lilac": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Clubs' Fair", "Clubs' Fair", "Clubs' Fair cleanup", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "burgundy": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Closing cleanup", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "orange": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners cleanup", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "magenta": ["Leader Appreciation", "Clubs' Fair setup", "Clubs' Fair setup", "Clubs' Fair", "Clubs' Fair", "Commuter Storage", "Commuter Storage", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "green": ["Leader Appreciation", "Leader Appreciation", "Carnival setup", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Concert", "Concert", "Concert", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "sky-blue": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Concert", "Concert", "Concert", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "Commuter Storage", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "gold": ["Leader Appreciation", "Leader Appreciation", "Carnival setup", "Clubs' Fair", "Clubs' Fair", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners cleanup", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "pink": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Clubs' Fair", "Clubs' Fair", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Commuter Storage", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "chartreuse": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Clubs' Fair", "Clubs' Fair", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Concert", "Concert", "Concert", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "red": ["Leader Appreciation", "Leader Appreciation", "Carnival setup", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Headliners setup", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Commuter Storage", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "yellow": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival cleanup", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Concert", "Concert", "Concert", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Leader Closing", "Closing Ceremonies", "Headliners setup", "Headliners", "Headliners", "Headliners", "Headliners", "Headliners", "Commuter Storage", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"], "navy": ["Leader Appreciation", "Leader Appreciation", "Frosh Groups", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Carnival and BBQ", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Parade", "Chill with VUSAC", "Chill with VUSAC", "Chill with VUSAC", "Concert", "Concert", "Concert", "Leader Closing", "Closing Ceremonies", "Closing Ceremonies", "Commuter Storage", "Commuter Storage", "Headliners", "Headliners", "Headliners", "Headliners", "SLEEP", "SLEEP", "SLEEP", "SLEEP", "SLEEP"]}
             }
 
+            
+            MODE = 0;
 
             // Sets the welcome message
             $( document ).ready(function() {
@@ -57,13 +62,28 @@
                 document.getElementById("day").innerHTML = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'][new Date().getDay()];
             });    
 
+            function drake() {
+                MODE = 0;
+                select();
+            };
+
+            function swift() {
+                MODE = 1;
+                select(); 
+            };
+
             // Core function that updates the schedule based on selection
-            $( "#group" ).change(function () {
+            $( "#group" ).change(select);
+    
+            function select() {
                 document.getElementById("direction").style.display = "initial"; 
                 var option = document.getElementById("group").value;
                 if (option == "") return;
                 document.getElementById("schedule").innerHTML = "";
-                document.getElementById("direction").innerHTML = "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span> plz.</p>";
+        
+                var text = (MODE == 0 ? "You should be at <span id='now' class='bold'></span> doe. At <span id='next_time'></span>, be at <span id='next' class='bold'></span> plz.</p>" :
+                                   "You should totally be at <span id='now' class='bold'></span>, and at <span id='next_time'></span>, <span id='next' class='bold'></span> never goes out of style.</p>");
+                document.getElementById("direction").innerHTML = text;
                 if (option == 'auni') {
                     document.getElementById("direction").innerHTML = "<h1>Good choice yo.</h1><img src='feature.png' height=290px>";
                     return;
@@ -98,7 +118,7 @@
                 }
                 document.getElementById("schedule").innerHTML = text;
 
-            });
+            };
 
         </script>
     </body>
