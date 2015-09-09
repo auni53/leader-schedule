@@ -33,11 +33,13 @@
             <option value="black">black</option>
             <option value="auni">auni</option>
         </select>
-        <button type="button" onclick="drake()">Drake Mode</button>
-        <button type="button" onclick="swift()">Swift Mode</button>
-        <button type="button" onclick="atkins()">Ben Atkins Mode</button>
-        <button type="button" onclick="brit()">British Mode</button>
-
+        <span id="same">
+            <button type="button" onclick="drake()">Drake Mode</button>
+            <button type="button" onclick="swift()">T-Swift Mode</button>
+            <button type="button" onclick="atkins()">Ben Atkins Mode</button>
+            <button type="button" onclick="brit()">British Mode</button>
+            <button type="button" id="same" onclick="same()">same.</button>
+        </span>
         <!--button onclick="select()">Submit</button><br><br-->
 
         <br><br>
@@ -63,10 +65,11 @@
                 document.getElementById("day").innerHTML = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'][new Date().getDay()];
             });    
 
-            MODE = "penis";
+            MODE = null;
 
             function drake() {
                 MODE = 0;
+
                 select();
             };
 
@@ -85,13 +88,22 @@
                 select();
             };
 
+            function same() {
+                $( "#same" ).append("<button type='button' onclick='same()'>same.</button>");
+                //element.insertAfter(document.getElementById("same"));
+                
+            };
+
             // Core function that updates the schedule based on selection
             $( "#group" ).change(select);
     
             function select() {
                 document.getElementById("direction").style.display = "initial"; 
                 var option = document.getElementById("group").value;
-                if (option == "") return;
+                if (option == "") {
+                    document.getElementById("direction").innerHTML = "Select your leader group first.";
+                    return;
+                }
                 document.getElementById("schedule").innerHTML = "";
        
                 var text; 
