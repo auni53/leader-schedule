@@ -34,10 +34,10 @@
             <option value="auni">auni</option>
         </select>
         <span id="same">
-            <button type="button" onclick="drake()">Drake Mode</button>
-            <button type="button" onclick="swift()">T-Swift Mode</button>
-            <button type="button" onclick="atkins()">Ben Atkins Mode</button>
-            <button type="button" onclick="brit()">British Mode</button>
+            <button type="button" onclick="change(0)">Drake Mode</button>
+            <button type="button" onclick="change(1)">T-Swift Mode</button>
+            <button type="button" onclick="change(2)">British Mode</button>
+            <button type="button" onclick="change(3)">Ben Atkins Mode</button>
             <button type="button" id="same" onclick="same()">same.</button>
         </span>
         <!--button onclick="select()">Submit</button><br><br-->
@@ -67,9 +67,13 @@
 
             MODE = null;
 
+            function change(num) {
+                MODE = num;
+                select();
+            };
+
             function drake() {
                 MODE = 0;
-
                 select();
             };
 
@@ -78,15 +82,16 @@
                 select(); 
             };
         
-            function atkins() {
+            function brit() {
                 MODE = 2;
                 select();
             };
-
-            function brit() {
+            
+            function atkins() {
                 MODE = 3;
                 select();
             };
+
 
             function same() {
                 $( "#same" ).append("<button type='button' onclick='same()'>same.</button>");
@@ -101,7 +106,7 @@
                 document.getElementById("direction").style.display = "initial"; 
                 var option = document.getElementById("group").value;
                 if (option == "") {
-                    document.getElementById("direction").innerHTML = "Select your leader group first.";
+                    document.getElementById("direction").innerHTML = "<font color='red' size=3>Select your leader group first.</font>";
                     return;
                 }
                 document.getElementById("schedule").innerHTML = "";
@@ -115,10 +120,10 @@
                         text = "You should totally be at <span id='now' class='bold'></span>. <span id='next' class='bold'></span> at <span id='next_time'></span> never goes out of style.";
                         break;
                     case 2:
-                        text = "<font size=30>Listen to me</font> -- you must be at <span id='now' class='bold'></span>. Chill with <span id='next' class='bold'></span> at <span id='next_time'></span>.";
+                        text = "'ello gov'nah, Her Majesty requests you at <span id='now' class='bold'></span>. Be a good ol' chap and make your way to <span id='next' class='bold'></span> at <span id='next_time'></span>.";
                         break;
                     case 3:
-                        text = "'ello gov'nah, Her Majesty requests you at <span id='now' class='bold'></span>. Be a good ol' chap and make your way to <span id='next' class='bold'></span> at <span id='next_time'></span>.";
+                        text = "<font size=30>Listen to me</font> -- you must be at <span id='now' class='bold'></span>. Chill with <span id='next' class='bold'></span> at <span id='next_time'></span>.";
                         break;
         
                     default:
