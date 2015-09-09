@@ -76,13 +76,20 @@
             function same() {
                 $( "#same" ).append("<button type='button' size=3 onclick='same()' style='margin-right:6px; width:" + C * 65 + "px; height:" + C * 23 + "px;'>same.</button>");
                 C = C * 1.1;
-                if (2.59 < C && C < 2.6) { 
+                if (2.59 < C && C < 2.6) 
                     $( "#same" ).append("<img src='ben.jpg' style='width:460px;position:absolute; '>");
-                }
-                if (4.5 < C && C < 5) {
+                if (4.5 < C && C < 5) 
                     $( "#same" ).append("<img src='rahul.jpg' style='width:400px;position:absolute'>");
-                }
-                console.log(C);
+                if (6.5 < C && C < 7) 
+                    $( "#same" ).append("<img src='lp.jpg' style='left:0; width:400px;position:absolute'>");
+                if (9.8 < C && C < 9.9)
+                    $( "#same" ).append("<img src='sumeeta.jpg' style='left:200px; top:50px; width:400px;position:absolute'>");
+                if (13 < C && C < 13.5)
+                    $( "#same" ).append("<img src='hannah.jpg' style='left:0; top:0; width:400px;position:absolute'>");
+                if (18 < C && C < 20)
+                    $( "#same" ).append("<img src='darren.jpg' style='right:0; top:0; width:400px;position:absolute'>");
+                    
+                    
             };
 
             // Core function that updates the schedule based on selection
