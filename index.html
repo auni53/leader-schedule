@@ -72,10 +72,17 @@
                 select();
             };
 
+            C = 1.1;
             function same() {
-                $( "#same" ).append("<button type='button' onclick='same()' style='margin-right:6px;'>same.</button>");
-                //element.insertAfter(document.getElementById("same"));
-                
+                $( "#same" ).append("<button type='button' size=3 onclick='same()' style='margin-right:6px; width:" + C * 65 + "px; height:" + C * 23 + "px;'>same.</button>");
+                C = C * 1.1;
+                if (2.59 < C && C < 2.6) { 
+                    $( "#same" ).append("<img src='ben.jpg' style='width:460px;position:absolute; '>");
+                }
+                if (4.5 < C && C < 5) {
+                    $( "#same" ).append("<img src='rahul.jpg' style='width:400px;position:absolute'>");
+                }
+                console.log(C);
             };
 
             // Core function that updates the schedule based on selection
