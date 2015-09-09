@@ -72,29 +72,8 @@
                 select();
             };
 
-            function drake() {
-                MODE = 0;
-                select();
-            };
-
-            function swift() {
-                MODE = 1;
-                select(); 
-            };
-        
-            function brit() {
-                MODE = 2;
-                select();
-            };
-            
-            function atkins() {
-                MODE = 3;
-                select();
-            };
-
-
             function same() {
-                $( "#same" ).append("<button type='button' onclick='same()'>same.</button>");
+                $( "#same" ).append("<button type='button' onclick='same()' style='margin-right:6px;'>same.</button>");
                 //element.insertAfter(document.getElementById("same"));
                 
             };
@@ -123,7 +102,7 @@
                         text = "'ello gov'nah, Her Majesty requests you at <span id='now' class='bold'></span>. Be a good ol' chap and make your way to <span id='next' class='bold'></span> at <span id='next_time'></span>.";
                         break;
                     case 3:
-                        text = "<font size=30>Listen to me</font> -- you must be at <span id='now' class='bold'></span>. Chill with <span id='next' class='bold'></span> at <span id='next_time'></span>.";
+                        text = "<font size=30>Listen to me</font> -- you must be at <span id='now' class='bold'></span>. And please, <em>please</em>, don't forget <span id='next' class='bold'></span> at <span id='next_time'></span>.";
                         break;
         
                     default:
