@@ -19,3 +19,9 @@ button  { padding: 5px 15px; }
 .bold   { font-weight: bold; }
 
 .option { font-size: 2em; }
+
+.container
+        { max-width: 100%; }
+
+img {max-width: 100%; height: auto;}
+
