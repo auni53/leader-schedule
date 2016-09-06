@@ -36,7 +36,7 @@
         <span id="same">
             <button type="button" onclick="change(0)">Drake Mode</button>
             <button type="button" onclick="change(1)">T-Swift Mode</button>
-            <button type="button" onclick="change(2)">British Mode</button>
+            <button type="button" onclick="change(2)">Elly Mode</button>
             <button type="button" onclick="change(4)">Kanye Mode</button>
             <button type="button" onclick="change(3)">Ben Atkins Mode</button>
             <button type="button" id="same" onclick="same()">same.</button>
@@ -133,7 +133,6 @@ fri: {"orange": ["Leader Appreciation", "Leader Appreciation", "Carnival & BBQ",
                     document.getElementById("direction").innerHTML = "<h1>Good choice yo.</h1><img src='feature.png' height=290px>";
                     return;
                 }
-    
             
                 shift = new Date().getHours() * 2;      //get half hours
                 minutes = new Date().getMinutes();
@@ -141,10 +140,9 @@ fri: {"orange": ["Leader Appreciation", "Leader Appreciation", "Carnival & BBQ",
                     shift++;    //add one half-hour
                 }
 
-                var day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri'][new Date().getDay()]; 
-                console.log(shift);
-
+                var day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'][new Date().getDay()]; 
                 starts = {
+                  'sat': 18,
                   'sun': 14,
                   'mon': 14,
                   'tue': 18,
@@ -154,16 +152,19 @@ fri: {"orange": ["Leader Appreciation", "Leader Appreciation", "Carnival & BBQ",
                 };
                 shift -= starts[day];
 
-                console.log(shift);
-
                 var times = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "01:00", "01:30", "02:00", "02:30", "03:00", "03:30", "04:00", "04:30", "05:00", "05:30", "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "01:00", "01:30", "02:00"];            
 
                 times = ((day === 'sun' || day === 'mon') ? ["07:00", "07:30", "08:00", "8:30"] : []).concat(times);
-
  
-                document.getElementById("now").innerHTML = sched[day][option][shift]; 
-                document.getElementById("next").innerHTML = sched[day][option][shift+1]; 
-                document.getElementById("next_time").innerHTML = times[shift+1];
+                if (sched[day]) {
+                  document.getElementById("now").innerHTML = sched[day][option][shift];
+                  document.getElementById("next").innerHTML = sched[day][option][shift + 1];
+                  document.getElementById("next_time").innerHTML = times[shift + 1];
+                } else {
+                  document.getElementById("now").innerHTML = 'home';
+                  document.getElementById("next").innerHTML = 'home'
+                  document.getElementById("next_time").innerHTML = times[shift + 1];
+                }
 
                 var text = ""; 
                 for (var i=0; i < times.length - 1; i++) {
